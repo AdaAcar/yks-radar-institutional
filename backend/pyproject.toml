@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yks-radar-institutional"
+version = "1.1.0"
+description = "Institutional exam ingestion, classical item statistics, shrinkage calibration, residual ledger, and report data endpoints for YKS Radar."
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.6,<3",
+    "openpyxl>=3.1,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yks_institutional*"]
+
+[tool.pytest.ini_options]
+testpaths = ["yks_institutional/tests"]
+addopts = "-q"
