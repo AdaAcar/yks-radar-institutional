@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# Local data / db artifacts (never commit real student data)
+*.sqlite3
+demo_yks.sqlite3
+demo_output/
+/data/
+/uploads/
+*.xls
+*.xlsx
+*.csv
+!**/tests/**/*.csv
+!**/fixtures/**/*.csv
+
+# Node / frontend
+node_modules/
+.next/
+dist/
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
